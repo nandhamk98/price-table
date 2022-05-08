@@ -1,7 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  // Data to be displayed
   const data = [
     {
       subscription: "FREE",
@@ -66,12 +66,12 @@ function App() {
             notAvailable={contents.notAvailable}
           />
         ))}
-        {/* <PlanCard /> */}
       </div>
     </div>
   );
 }
 
+// Plan card for each Subscription type
 function PlanCard({ subscription, price, duration, benifits, notAvailable }) {
   return (
     <div className="planCard">
@@ -88,6 +88,7 @@ function PlanCard({ subscription, price, duration, benifits, notAvailable }) {
   );
 }
 
+// benefit list: based on availablility symbol is added
 function BenifitsList({ benifits, symbol }) {
   return (
     <div className="planBenifits">
