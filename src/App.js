@@ -1,4 +1,5 @@
 import "./App.css";
+import { PlanCard } from "./PlanCard";
 
 function App() {
   // Data to be displayed
@@ -67,38 +68,6 @@ function App() {
           />
         ))}
       </div>
-    </div>
-  );
-}
-
-// Plan card for each Subscription type
-function PlanCard({ subscription, price, duration, benifits, notAvailable }) {
-  return (
-    <div className="planCard">
-      <h2 className="planTitle">{subscription}</h2>
-      <p>
-        <span className="price">{price}</span>
-        <sub>/{duration}</sub>
-      </p>
-      <hr />
-      <BenifitsList benifits={benifits} symbol="✔️" />
-      <BenifitsList benifits={notAvailable} symbol="❌" />
-      <input type="button" value="BUTTON" className="button" />
-    </div>
-  );
-}
-
-// benefit list: based on availablility symbol is added
-function BenifitsList({ benifits, symbol }) {
-  return (
-    <div className="planBenifits">
-      <ul>
-        {benifits.map((benefit) => (
-          <li>
-            <span className="symbol">{symbol}</span> {benefit}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
